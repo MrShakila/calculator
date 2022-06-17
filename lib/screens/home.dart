@@ -51,18 +51,22 @@ class _HomeState extends State<Home> {
                     Container(
                         padding: const EdgeInsets.all(20),
                         alignment: Alignment.centerLeft,
-                        child: Text(
-                          userQuestion,
-                          style: const TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                        child: FittedBox(
+                          child: Text(
+                            userQuestion,
+                            style: const TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
                         )),
                     Container(
                       padding: const EdgeInsets.all(20),
                       alignment: Alignment.centerRight,
-                      child: Text(
-                        userAnswe,
-                        style: const TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                      child: FittedBox(
+                        child: Text(
+                          userAnswe,
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                   ]),
@@ -80,6 +84,7 @@ class _HomeState extends State<Home> {
                           buttonTapped: () {
                             setState(() {
                               userQuestion = "";
+                              userAnswe = "";
                             });
                           },
                           buttonText: buttons[index],
